@@ -12,6 +12,10 @@ RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C /
 # Add user
 RUN useradd qtc --home-dir=/opt/qtc && mkdir /opt/qtc
 
+RUN rm -rf /var/cache/pacman/pkg/ 
+
+RUN mkdir /compiler
+
 # VOLUME /compiler_volume/
 
 ENTRYPOINT ["/init"]
