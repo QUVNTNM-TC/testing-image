@@ -3,7 +3,7 @@ MAINTAINER Sudokamikaze <sudokamikaze@protonmail.com>
 
 # Build tools
 RUN pacman -Syyu --noconfirm && pacman -S \
-    base-devel git 
+    base-devel git --noconfirm
 
 # Add s6-overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v1.11.0.1/s6-overlay-amd64.tar.gz /tmp/
